@@ -3,9 +3,11 @@ from discord.ext import tasks, commands
 import datetime
 import pytz
 import os
+from dotenv import load_dotenv
 
-TOKEN = 'MTQ3Mzc1NDc4Mzc4MDE4MDA0MQ.G1Tln9.byL-Xns4R-I0GaOzOQ2ny2gAbObuMYp6kdOscg'
-CHANNEL_ID = 1453221564161196052
+load_dotenv()  # <--- Load file .env
+TOKEN = os.getenv('DISCORD_TOKEN')  # <--- Lấy token từ file ẩn
+CHANNEL_ID = int(os.getenv('CHANNEL_ID')) # <--- Lấy ID và đổi sang số nguyên
 TIMEZONE = pytz.timezone('Asia/Ho_Chi_Minh')
 TIME_TO_SEND = datetime.time(hour=2, minute=20, second=0, tzinfo=TIMEZONE)
 
