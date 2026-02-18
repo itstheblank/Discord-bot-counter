@@ -5,9 +5,9 @@ import pytz
 import os
 from dotenv import load_dotenv
 
-load_dotenv()  # <--- Load file .env
-TOKEN = os.getenv('DISCORD_TOKEN')  # <--- Lấy token từ file ẩn
-CHANNEL_ID = int(os.getenv('CHANNEL_ID')) # <--- Lấy ID và đổi sang số nguyên
+load_dotenv()
+TOKEN = os.getenv('DISCORD_TOKEN')
+CHANNEL_ID = int(os.getenv('CHANNEL_ID'))
 TIMEZONE = pytz.timezone('Asia/Ho_Chi_Minh')
 TIME_TO_SEND = datetime.time(hour=2, minute=20, second=0, tzinfo=TIMEZONE)
 
