@@ -4,6 +4,7 @@ import datetime
 import pytz
 import os
 from dotenv import load_dotenv
+from keep_alive import keep_alive
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
@@ -45,4 +46,5 @@ async def daily_counter():
     else:
         print("No channels found!")
 
+keep_alive()
 bot.run(TOKEN)
