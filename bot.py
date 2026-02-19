@@ -9,7 +9,7 @@ load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 CHANNEL_ID = int(os.getenv('CHANNEL_ID'))
 TIMEZONE = pytz.timezone('Asia/Ho_Chi_Minh')
-TIME_TO_SEND = datetime.time(hour=2, minute=20, second=0, tzinfo=TIMEZONE)
+TIME_TO_SEND = datetime.time(hour=0, minute=0, second=0, tzinfo=TIMEZONE)
 
 intents = discord.Intents.default()
 bot = commands.Bot(command_prefix='!', intents=intents)
